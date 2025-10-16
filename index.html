@@ -15,13 +15,13 @@
   </style>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-  <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center">
+  <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-center">
     
     <!-- Left: Logo / Branding -->
-    <div class="md:w-1/2 w-full flex justify-center mb-8 md:mb-0">
+    <div class="md:w-2/3 w-full flex justify-center mb-8 md:mb-0 md:mr-8">
       <div class="text-center">
         <!-- Replace src with actual logo image file you extract -->
-        <img src="images/Bob_Lansink_logo.png" alt="Bob Lansink for Children Logo" class="mx-auto mb-6">
+        <img src="images/Bob_Lansink_logo.png" alt="Bob Lansink for Children Logo" class="mx-auto mb-6 w-full max-w-2xl transform scale-125">
         
         <!-- If no image is used, you can replicate with SVG/text -->
         <!-- Could replace the above with inline SVG of the logo -->
@@ -29,28 +29,28 @@
     </div>
     
     <!-- Right: Sign-In Form -->
-    <div class="md:w-1/2 w-full max-w-md bg-white shadow-lg rounded-lg p-8">
-      <div class="mb-6">
-        <h2 class="text-2xl font-bold text-white bg-[var(--color-navy)] py-2 px-4 rounded-sm inline-block">
+    <div class="md:w-1/3 w-full max-w-sm bg-white shadow-lg rounded-lg p-6">
+      <div class="mb-4">
+        <h2 class="text-xl font-bold text-white bg-[var(--color-navy)] py-1.5 px-3 rounded-sm inline-block">
           Sign In
         </h2>
       </div>
-      <form id="loginForm" class="space-y-4">
+      <form id="loginForm" class="space-y-3">
         <div>
           <label for="username" class="block text-sm font-medium text-gray-700">Username*</label>
           <input type="text" id="username" name="username"
-                 class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 
-                        focus:outline-none focus:ring-2 focus:ring-[var(--color-navy)] focus:border-[var(--color-navy)]"
+                 class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2.5 text-sm
+                        focus:outline-none focus:ring-1 focus:ring-[var(--color-navy)] focus:border-[var(--color-navy)]"
                  required>
         </div>
         <div>
           <label for="password" class="block text-sm font-medium text-gray-700">Password*</label>
           <input type="password" id="password" name="password"
-                 class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 
-                        focus:outline-none focus:ring-2 focus:ring-[var(--color-navy)] focus:border-[var(--color-navy)]"
+                 class="mt-1 block w-full border border-gray-300 rounded-md py-1.5 px-2.5 text-sm
+                        focus:outline-none focus:ring-1 focus:ring-[var(--color-navy)] focus:border-[var(--color-navy)]"
                  required>
         </div>
-        <div class="pt-4">
+        <div class="pt-3">
           <button type="submit"
                   class="w-full py-2 px-4 bg-[var(--color-red)] text-white font-bold rounded-md 
                          hover:bg-[var(--color-red-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-navy)]">
