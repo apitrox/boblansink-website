@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bob Lansink – Sign In</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom colors to match screenshot */
+    :root {
+      --color-navy: #0B2343;
+      --color-red:  #A6192E;
+      --color-white: #FFFFFF;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center">
+    
+    <!-- Left: Logo / Branding -->
+    <div class="md:w-1/2 w-full flex justify-center mb-8 md:mb-0">
+      <div class="text-center">
+        <!-- Replace src with actual logo image file you extract -->
+        <img src="images/Bob_Lansink_logo.png" alt="Bob Lansink for Children Logo" class="mx-auto mb-6">
+        
+        <!-- If no image is used, you can replicate with SVG/text -->
+        <!-- Could replace the above with inline SVG of the logo -->
+      </div>
+    </div>
+    
+    <!-- Right: Sign-In Form -->
+    <div class="md:w-1/2 w-full max-w-md bg-white shadow-lg rounded-lg p-8">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-white bg-[var(--color-navy)] py-2 px-4 rounded-sm inline-block">
+          Sign In
+        </h2>
+      </div>
+      <form id="loginForm" class="space-y-4">
+        <div>
+          <label for="username" class="block text-sm font-medium text-gray-700">Username*</label>
+          <input type="text" id="username" name="username"
+                 class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 
+                        focus:outline-none focus:ring-2 focus:ring-[var(--color-navy)] focus:border-[var(--color-navy)]"
+                 required>
+        </div>
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Password*</label>
+          <input type="password" id="password" name="password"
+                 class="mt-1 block w-full border border-gray-300 rounded-md py-2 px-3 
+                        focus:outline-none focus:ring-2 focus:ring-[var(--color-navy)] focus:border-[var(--color-navy)]"
+                 required>
+        </div>
+        <div class="pt-4">
+          <button type="submit"
+                  class="w-full py-2 px-4 bg-[var(--color-red)] text-white font-bold rounded-md 
+                         hover:bg-[var(--color-red-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-navy)]">
+            Sign In
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Simple form handler (dummy)
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      // TODO: Replace with real auth logic
+      alert('Username: ' + username + '\\nPassword: ' + password);
+    });
+  </script>
+</body>
+</html>
